@@ -24,7 +24,7 @@ const CommentCard = ({ post, refetch }) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("text", commenttext);
-    fetch(`http://localhost:1337/comment/${post.id}`, {
+    fetch(`https://backend-social-media.onrender.com/comment/${post.id}`, {
       method: "POST",
       body: formData,
       headers: {

@@ -107,7 +107,7 @@ const UserProfile = () => {
 
   // const options = {
   //   method: "POST",
-  //   url: "http://localhost:1337/graphql",
+  //   url: "https://backend-social-media.onrender.com/graphql",
   //   headers: {
   //     Authorization: `Bearer ${userData.token}`,
   //   },
@@ -139,7 +139,7 @@ const UserProfile = () => {
       formData.append("postpic", file);
     }
 
-    fetch("http://localhost:1337/profile", {
+    fetch("https://backend-social-media.onrender.com/profile", {
       method: "POST",
       body: formData,
       headers: headers,
@@ -159,7 +159,7 @@ const UserProfile = () => {
   const handleFollow = (id) => {
     const followOption = {
       method: "POST",
-      url: `http://localhost:1337/user/follow/${id}`,
+      url: `https://backend-social-media.onrender.com/user/follow/${id}`,
       headers: {
         Authorization: `Bearer ${userData.token}`,
       },

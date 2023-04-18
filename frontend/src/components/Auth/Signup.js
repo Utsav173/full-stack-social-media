@@ -33,7 +33,7 @@ const Signup = () => {
     formData.append("password", password);
     formData.append("postpic", file);
 
-    fetch("http://localhost:1337/signup", {
+    fetch("https://backend-social-media.onrender.com/signup", {
       method: "POST",
       body: formData,
     })

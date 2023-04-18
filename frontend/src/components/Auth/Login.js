@@ -23,7 +23,7 @@ const Login = () => {
       password: "",
     },
     onSubmit: (values) => {
-      fetch("http://localhost:1337/login", {
+      fetch("https://backend-social-media.onrender.com/login", {
         method: "POST",
         body: JSON.stringify(values, null, 2),
         headers: {

@@ -55,7 +55,7 @@ export default function FollowCard() {
   const handleFollow = () => {
     const followOption = {
       method: "POST",
-      url: `http://localhost:1337/user/follow/${id}`,
+      url: `https://backend-social-media.onrender.com/user/follow/${id}`,
       headers: {
         Authorization: `Bearer ${userData}`,
       },

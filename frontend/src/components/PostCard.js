@@ -54,7 +54,7 @@ const PostCard = ({ post }) => {
   const handleDelete = () => {
     const options = {
       method: "DELETE",
-      url: `http://localhost:1337/post/${post.id}`,
+      url: `https://backend-social-media.onrender.com/post/${post.id}`,
       headers: {
         Authorization: `Bearer ${userData.token}`,
       },
@@ -79,7 +79,7 @@ const PostCard = ({ post }) => {
   const handleSave = () => {
     const options = {
       method: "GET",
-      url: `http://localhost:1337/save/${post.id}`,
+      url: `https://backend-social-media.onrender.com/save/${post.id}`,
       headers: {
         Authorization: `Bearer ${userData.token}`,
       },
@@ -102,7 +102,7 @@ const PostCard = ({ post }) => {
   const handleLike = () => {
     const options = {
       method: "GET",
-      url: `http://localhost:1337/like/${post.id}`,
+      url: `https://backend-social-media.onrender.com/like/${post.id}`,
       headers: {
         Authorization: `Bearer ${userData.token}`,
       },
@@ -124,7 +124,7 @@ const PostCard = ({ post }) => {
 
   const fetchUserlist = () => {
     const optionsFetcjUser = {
-      url: "http://localhost:1337/graphql",
+      url: "https://backend-social-media.onrender.com/graphql",
       method: "post",
       headers: {
         Authorization: `Bearer ${userData.token}`,
@@ -148,7 +148,7 @@ const PostCard = ({ post }) => {
   const handleSharePost = (usId) => {
     const options = {
       method: "POST",
-      url: `http://localhost:1337/post/share/${post.id}?sharedWith=${usId}`,
+      url: `https://backend-social-media.onrender.com/post/share/${post.id}?sharedWith=${usId}`,
       headers: {
         Authorization: `Bearer ${userData.token}`,
       },

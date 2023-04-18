@@ -5,7 +5,7 @@ const TableRow = ({ data, index, refetch, key }) => {
   const handleStatus = async (id) => {
     console.log("insise fubn",id);
     const response = await fetch(
-      `http://localhost:1337/admin/toggleUser/${id}`,
+      `https://backend-social-media.onrender.com/admin/toggleUser/${id}`,
       {
         method: "POST",
         headers: {

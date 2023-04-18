@@ -55,7 +55,7 @@ const LatestPostcard = ({ post }) => {
   const handleDelete = () => {
     const options = {
       method: "DELETE",
-      url: `http://localhost:1337/post/${post.id}`,
+      url: `https://backend-social-media.onrender.com/post/${post.id}`,
       headers: {
         Authorization: `Bearer ${userData.token}`,
       },
@@ -80,7 +80,7 @@ const LatestPostcard = ({ post }) => {
   const handleSave = () => {
     const options = {
       method: "GET",
-      url: `http://localhost:1337/save/${post.id}`,
+      url: `https://backend-social-media.onrender.com/save/${post.id}`,
       headers: {
         Authorization: `Bearer ${userData.token}`,
       },
@@ -103,7 +103,7 @@ const LatestPostcard = ({ post }) => {
   const handleLike = () => {
     const options = {
       method: "GET",
-      url: `http://localhost:1337/like/${post.id}`,
+      url: `https://backend-social-media.onrender.com/like/${post.id}`,
       headers: {
         Authorization: `Bearer ${userData.token}`,
       },
@@ -125,7 +125,7 @@ const LatestPostcard = ({ post }) => {
 
   const fetchUserlist = () => {
     const optionsFetcjUser = {
-      url: "http://localhost:1337/graphql",
+      url: "https://backend-social-media.onrender.com/graphql",
       method: "post",
       headers: {
         Authorization: `Bearer ${userData.token}`,
@@ -149,7 +149,7 @@ const LatestPostcard = ({ post }) => {
   const handleSharePost = (usId) => {
     const options = {
       method: "POST",
-      url: `http://localhost:1337/post/share/${post.id}?sharedWith=${usId}`,
+      url: `https://backend-social-media.onrender.com/post/share/${post.id}?sharedWith=${usId}`,
       headers: {
         Authorization: `Bearer ${userData.token}`,
       },
@@ -198,7 +198,7 @@ const LatestPostcard = ({ post }) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("text", commenttext);
-    fetch(`http://localhost:1337/comment/${post.id}`, {
+    fetch(`https://backend-social-media.onrender.com/comment/${post.id}`, {
       method: "POST",
       body: formData,
       headers: {

@@ -21,7 +21,7 @@ const ForgotPassword = () => {
       newPassword: "",
     },
     onSubmit: (values) => {
-      fetch("http://localhost:1337/forgot-password", {
+      fetch("https://backend-social-media.onrender.com/forgot-password", {
         method: "POST",
         body: JSON.stringify(values, null, 2),
         headers: {

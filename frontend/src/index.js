@@ -9,7 +9,7 @@ import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient({
-  uri: "http://localhost:1337/graphql",
+  uri: "https://backend-social-media.onrender.com/graphql",
   request: (operation) => {
     const token = localStorage.getItem("user-token");
     operation.setContext({

@@ -42,7 +42,7 @@ export default function Navbar() {
   const [caption, setCaption] = useState("");
 
   const handleLogout = () => {
-    fetch("http://localhost:1337/logout", {
+    fetch("https://backend-social-media.onrender.com/logout", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${userData.token}`,
@@ -75,7 +75,7 @@ export default function Navbar() {
       formData.append("caption", caption);
     }
 
-    fetch("http://localhost:1337/create-post", {
+    fetch("https://backend-social-media.onrender.com/create-post", {
       method: "POST",
       body: formData,
       headers: headers,

@@ -56,7 +56,6 @@
     //   "ignoredNodes": ["ConditionalExpression"]
     // }],
     "indent":"off",
-    "linebreak-style":              ["error", "unix"],
     "no-dupe-keys":                 ["error"],
     "no-duplicate-case":            ["error"],
     "no-extra-semi":                ["warn"],
